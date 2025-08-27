@@ -1,0 +1,50 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Log
+*.log
+logs/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+*.class
+*.jar
+*.war
+*.zip
+*.tar.gz
+/build/
+/out/
+
+# IDEs
+.project
+.classpath
+.settings/
+.idea/
+*.iws
+*.ipr
+.metadata
+/gen/
+bin/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Claves y credenciales
+*.key
+*.pem
+*.p12
+*.jks
+*.properties
+!application.properties
+!application-*.properties
