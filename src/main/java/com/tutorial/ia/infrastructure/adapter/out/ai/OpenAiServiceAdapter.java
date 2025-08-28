@@ -31,7 +31,7 @@ public class OpenAiServiceAdapter implements AiServicePort {
 
     @Override
     public String generateInsights(String userJournalHistory) {
-        String insightsPrompt = "Based on the following collection of journal entries, please provide comprehensive insights about patterns, emotional trends, personal growth, and recommendations:\n\n" + userJournalHistory;
+        String insightsPrompt = "Based on the following collection of journal entries, please provide comprehensive insights about patterns, emotional trends, personal growth, and recommendations: :\n\n" + userJournalHistory;
         
         return chatClient.prompt()
                 .user(insightsPrompt)
