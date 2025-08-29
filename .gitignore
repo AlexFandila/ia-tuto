@@ -52,3 +52,7 @@ application-dev.properties
 
 # Datos sensibles
 src/main/resources/data.sql
+mario_diary_entries.sql
+mario_entries_only.sql
+*mario*.sql
+diary_entries.sql
