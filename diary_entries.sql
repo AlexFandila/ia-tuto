@@ -1,31 +1,42 @@
--- Datos de prueba para usuarios
-INSERT INTO users (username, email, password, created_at, updated_at) VALUES 
-('john_doe', 'john.doe@example.com', 'password123', '2024-01-15 10:00:00', '2024-01-15 10:00:00'),
-('jane_smith', 'jane.smith@example.com', 'securepass456', '2024-01-16 11:30:00', '2024-01-16 11:30:00'),
-('alex_wilson', 'alex.wilson@example.com', 'mypassword789', '2024-01-17 14:20:00', '2024-01-17 14:20:00'),
-('mario_dev', 'mario.dev@example.com', 'password456', '2024-05-20 08:00:00', '2024-05-20 08:00:00');
+Procesado: 01. 31_05_2024.txt -> 2024-05-31
+Procesado: 02. 02_06_2024.txt -> 2024-06-02
+Procesado: 03. 04_06_2024.txt -> 2024-06-04
+Procesado: 04. 05_06_2024.txt -> 2024-06-05
+Procesado: 05. 06_06_2024.txt -> 2024-06-06
+Procesado: 06. 08_06_2024.txt -> 2024-06-08
+Procesado: 07. 09_06_2024.txt -> 2024-06-09
+Procesado: 08. 10_06_2024.txt -> 2024-06-10
+Procesado: 09. 11_06_2024.txt -> 2024-06-11
+Procesado: 10. 12_06_2024.txt -> 2024-06-12
+Procesado: 11. 13_06_2024.txt -> 2024-06-13
+Procesado: 12. 14-15_06_2024.txt -> 2024-06-15
+Procesado: 13. 16_06_2024.txt -> 2024-06-16
+Procesado: 14. 17_06_2024.txt -> 2024-06-17
+Procesado: 15. 18_06_2024.txt -> 2024-06-18
+Procesado: 16. 19_06_2024.txt -> 2024-06-19
+Procesado: 17. 20_06_2024.txt -> 2024-06-20
+Procesado: 18. 21_06_2024.txt -> 2024-06-21
+Procesado: 19. 22_06_2024.txt -> 2024-06-22
+Procesado: 20. 23_06_2024.txt -> 2024-06-23
+Procesado: 21. 24_06_2024.txt -> 2024-06-24
+Procesado: 22. 25_06_2024.txt -> 2024-06-25
+Procesado: 23. 27_06_2024.txt -> 2024-06-27
+Procesado: 24. 29-30_06_2024.txt -> 2024-06-30
+Procesado: 25. 2_07_2024.txt -> 2024-07-02
+Procesado: 26. 05_07_2024.txt -> 2024-07-05
+Procesado: 27. 07_07_2024.txt -> 2024-07-07
+Procesado: 28. 08_07_2024.txt -> 2024-07-08
+Procesado: 29. 09_07_2024.txt -> 2024-07-09
+Procesado: 30. 10_07_2024.txt -> 2024-07-10
+Procesado: 31. 11_07_2024.txt -> 2024-07-11
+Procesado: 32. 26_08_2024.txt -> 2024-08-26
+Procesado: 33. 27_08_2024.txt -> 2024-08-27
+Procesado: 34. 28_08_2024.txt -> 2024-08-28
+Procesado: 35. 31_08_2024.txt -> 2024-08-31
+Procesado: 36. 14_09_2024.txt -> 2024-09-14
 
--- Datos de prueba para entradas de diario - Usuarios generales
-INSERT INTO journal_entry (title, entry, user_id, created_at, updated_at) VALUES 
-('Mi primer día', 'Hoy comenzé mi nuevo trabajo como desarrollador. Me siento emocionado pero un poco nervioso. El equipo parece muy amigable y el ambiente de trabajo es genial. Espero aprender mucho y contribuir al éxito de la empresa.', 1, '2024-01-15 18:00:00', '2024-01-15 18:00:00'),
-
-('Reflexiones sobre el fin de semana', 'Pasé un fin de semana increíble con mi familia. Fuimos de excursión a las montañas y disfrutamos de la naturaleza. Me di cuenta de lo importante que es desconectarse del trabajo y pasar tiempo de calidad con los seres queridos.', 1, '2024-01-20 20:30:00', '2024-01-20 20:30:00'),
-
-('Desafíos en el trabajo', 'Hoy enfrenté un problema técnico complejo que me tomó varias horas resolver. Aunque fue frustrante al principio, al final logré encontrar la solución y me siento muy orgulloso del resultado. Estos desafíos me ayudan a crecer profesionalmente.', 1, '2024-01-22 19:15:00', '2024-01-22 19:15:00'),
-
-('Nuevo proyecto personal', 'Decidí empezar a aprender un nuevo lenguaje de programación en mi tiempo libre. Aunque es desafiante, estoy disfrutando mucho el proceso de aprendizaje. Me propuse dedicar al menos una hora diaria a este proyecto.', 2, '2024-01-18 21:00:00', '2024-01-18 21:00:00'),
-
-('Yoga y meditación', 'Hoy probé una clase de yoga por primera vez. Al principio me sentía un poco torpe, pero al final de la sesión me sentía muy relajada y en paz. Creo que voy a incorporar esta práctica a mi rutina semanal.', 2, '2024-01-21 17:45:00', '2024-01-21 17:45:00'),
-
-('Cocinando nuevas recetas', 'Experimenté con una nueva receta de cocina internacional. Aunque no salió perfecta la primera vez, me divertí mucho en el proceso. La cocina se ha convertido en una forma de expresión creativa para mí.', 2, '2024-01-23 20:00:00', '2024-01-23 20:00:00'),
-
-('Entrenamiento y fitness', 'Volví al gimnasio después de varias semanas de pausa. Aunque me costó trabajo, me siento bien de haber retomado mi rutina de ejercicios. La actividad física realmente mejora mi estado de ánimo y energía.', 3, '2024-01-19 07:30:00', '2024-01-19 07:30:00'),
-
-('Lectura inspiradora', 'Terminé de leer un libro muy inspirador sobre desarrollo personal. Las ideas que presenta me han hecho reflexionar sobre mis metas y prioridades. Definitivamente voy a implementar algunos de los consejos en mi vida diaria.', 3, '2024-01-24 22:00:00', '2024-01-24 22:00:00'),
-
-('Tiempo con amigos', 'Tuve una reunión muy agradable con mis amigos de la universidad. Hacía mucho que no nos veíamos y fue genial ponernos al día. Me recordó la importancia de mantener las amistades a pesar de las ocupaciones diarias.', 3, '2024-01-25 23:30:00', '2024-01-25 23:30:00');
-
--- Entradas del diario personal de mario_dev (CONTENIDO REAL)
+-- Procesados 36 archivos de diario
+-- Entradas SQL para mario_dev:
 INSERT INTO journal_entry (title, entry, user_id, created_at, updated_at) VALUES
 ('El día de hoy parecía que iba a ir bastante bien', 'El día de hoy parecía que iba a ir bastante bien. Me he levantado tranquilo, incluso contento, había cerrado el capítulo de Rim. Y por la mañana me ha vuelto a hablar, otra vez ansiedad, malestar, dudas, cuestionamientos sobre uno mismo. A partir de ahí me he empezado a sentir bastante mal. He decidido escribirle un correo a mi psiquiatra, solo para desahogarme con el dolor. Después de enviar el correo he hablado con Vadim para que lo revisara por si había algún punto que me faltaba, otra vez dudando de mí, buscando la confirmación de alguien externo, Miguel me lo ha dejado claro y tenía razón yo soy quien debe ser el dueño de mi vida, yo tomo mis decisiones, yo me equivoco, yo aprendo. Los demás están ahí para darnos señales de nuestras carencias, mientras tanto es uno quien debe tomar las riendas de su vida. Es algo que me ha quedado claro, espero no olvidarlo, por estas cosas supongo que empiezo a escribir esto. 
 
@@ -866,28 +877,5 @@ Todos los días repasaré esto después de hablar con dios añadiré o modificar
 
 
 Buenas nochees, gracias por darme estos amigos, gracias por haberme hecho una persona plena, gracias por traer salud a los míos, por un futuro pleno y por un yo mejor.', 4, '2024-09-14 20:45:00', '2024-09-14 20:45:00');
--- Datos de prueba para objetivos (Goals)
-INSERT INTO goal (title, description, goal_type, is_completed, user_id, created_at, updated_at) VALUES 
--- Objetivos de John Doe (usuario 1) - Desarrollador
-('Ascenso profesional', 'Conseguir una promoción a Senior Developer en mi empresa actual dentro de los próximos 12-18 meses', 'LONG_TERM', false, 1, '2024-01-15 10:30:00', '2024-01-15 10:30:00'),
-('Certificación AWS', 'Obtener la certificación AWS Solutions Architect Associate para mejorar mis habilidades en cloud computing', 'MEDIUM_TERM', false, 1, '2024-01-15 10:35:00', '2024-01-15 10:35:00'),
-('Rutina ejercicio semanal', 'Establecer y mantener una rutina de ejercicio de 4 días por semana para mejorar mi salud física', 'SHORT_TERM', false, 1, '2024-01-15 10:40:00', '2024-01-15 10:40:00'),
 
--- Objetivos de Jane Smith (usuario 2) - Enfoque bienestar
-('Negocio propio yoga', 'Abrir mi propio estudio de yoga y meditación, generar ingresos de al menos 3000€/mes', 'LONG_TERM', false, 2, '2024-01-16 12:00:00', '2024-01-16 12:00:00'),
-('Curso nutrición holística', 'Completar un curso de nutrición holística para complementar mi práctica de yoga', 'MEDIUM_TERM', false, 2, '2024-01-16 12:05:00', '2024-01-16 12:05:00'),
-('Meditar diariamente 30min', 'Establecer una práctica diaria de meditación de 30 minutos todas las mañanas', 'SHORT_TERM', true, 2, '2024-01-16 12:10:00', '2024-01-16 12:10:00'),
-
--- Objetivos de Alex Wilson (usuario 3) - Fitness y desarrollo personal
-('Competir en triatlón', 'Completar mi primer triatlón Ironman 70.3 y terminar en menos de 6 horas', 'LONG_TERM', false, 3, '2024-01-17 14:30:00', '2024-01-17 14:30:00'),
-('Leer 24 libros año', 'Leer al menos 24 libros de desarrollo personal y biografías este año (2 por mes)', 'MEDIUM_TERM', false, 3, '2024-01-17 14:35:00', '2024-01-17 14:35:00'),
-('Despertar 6AM diario', 'Establecer el hábito de levantarme a las 6:00 AM todos los días durante 90 días consecutivos', 'SHORT_TERM', false, 3, '2024-01-17 14:40:00', '2024-01-17 14:40:00'),
-
--- Objetivos de Mario (usuario 4) - Crecimiento personal intensivo basado en sus diarios
-('Ser millonario a los 35', 'Alcanzar un patrimonio neto de 1 millón de euros antes de cumplir 35 años através de inversiones, desarrollo profesional y posibles emprendimientos', 'LONG_TERM', false, 4, '2024-05-20 08:30:00', '2024-05-20 08:30:00'),
-('Convertirme en hombre íntegro', 'Desarrollar integridad personal completa: cumplir siempre mi palabra conmigo mismo, tomar decisiones basadas en mis valores, eliminar dependencias emocionales y ser respetado por mi carácter', 'LONG_TERM', false, 4, '2024-05-20 08:35:00', '2024-05-20 08:35:00'),
-('Experto en pentesting', 'Convertirme en un experto en pentesting y ciberseguridad, conseguir certificaciones OSCP, CEH y trabajar como consultor de seguridad freelance', 'MEDIUM_TERM', false, 4, '2024-05-20 08:40:00', '2024-05-20 08:40:00'),
-('Físico atlético y fuerte', 'Alcanzar mi mejor forma física: ganar 10kg de músculo, dominar jiu jitsu (cinturón azul), hacer 20 dominadas seguidas y sentirme completamente cómodo con mi apariencia', 'MEDIUM_TERM', false, 4, '2024-05-20 08:45:00', '2024-05-20 08:45:00'),
-('Rutina diaria inquebrantable', 'Mantener una rutina diaria perfecta durante 90 días: meditación 20min, gimnasio/jiu jitsu, trabajo productivo, diario personal, lectura 30min, no videojuegos, no Discord improductivo', 'SHORT_TERM', false, 4, '2024-05-20 08:50:00', '2024-05-20 08:50:00'),
-('Aprobar carnet de conducir', 'Terminar las clases prácticas de autoescuela y aprobar el examen de conducir antes de que caduque mi permiso teórico', 'SHORT_TERM', false, 4, '2024-05-20 08:55:00', '2024-05-20 08:55:00'),
-('Independencia emocional total', 'Eliminar completamente mi dependencia emocional de otras personas para estar bien conmigo mismo, desarrollar autoestima sólida basada en mis logros y valores, no en validación externa', 'MEDIUM_TERM', false, 4, '2024-05-20 09:00:00', '2024-05-20 09:00:00');
+-- Total: 36 entradas generadas

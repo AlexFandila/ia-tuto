@@ -1,5 +1,6 @@
 package com.tutorial.ia.application.service;
 
+import com.tutorial.ia.domain.exception.DuplicateResourceException;
 import com.tutorial.ia.domain.model.User;
 import com.tutorial.ia.domain.port.out.UserRepositoryPort;
 import org.junit.jupiter.api.BeforeEach;
@@ -62,12 +63,12 @@ class UserServiceTest {
 
         when(userRepositoryPort.existsByUsername(username)).thenReturn(true);
 
-        IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
+        DuplicateResourceException exception = assertThrows(
+            DuplicateResourceException.class,
             () -> userService.createUser(username, email, password)
         );
 
-        assertEquals("Username already exists", exception.getMessage());
+        assertEquals("User with username 'existinguser' already exists", exception.getMessage());
         verify(userRepositoryPort).existsByUsername(username);
         verify(userRepositoryPort, never()).save(any(User.class));
     }
@@ -81,12 +82,12 @@ class UserServiceTest {
         when(userRepositoryPort.existsByUsername(username)).thenReturn(false);
         when(userRepositoryPort.existsByEmail(email)).thenReturn(true);
 
-        IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
+        DuplicateResourceException exception = assertThrows(
+            DuplicateResourceException.class,
             () -> userService.createUser(username, email, password)
         );
 
-        assertEquals("Email already exists", exception.getMessage());
+        assertEquals("User with email 'existing@example.com' already exists", exception.getMessage());
         verify(userRepositoryPort).existsByUsername(username);
         verify(userRepositoryPort).existsByEmail(email);
         verify(userRepositoryPort, never()).save(any(User.class));

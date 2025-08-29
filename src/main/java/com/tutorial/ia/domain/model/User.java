@@ -16,6 +16,8 @@ public class User {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private List<JournalEntry> journalEntries;
+    private List<Goal> goals;
+    private List<AnalysisReport> analysisReports;
 
     public User(String username, String email, String password) {
         this.username = username;

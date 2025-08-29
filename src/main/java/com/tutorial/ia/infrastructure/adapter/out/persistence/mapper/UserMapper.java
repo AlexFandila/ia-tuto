@@ -2,52 +2,24 @@ package com.tutorial.ia.infrastructure.adapter.out.persistence.mapper;
 
 import com.tutorial.ia.domain.model.User;
 import com.tutorial.ia.infrastructure.adapter.out.persistence.entity.UserJpaEntity;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
-import java.util.stream.Collectors;
-
-@Component
-@RequiredArgsConstructor
-public class UserMapper {
+@Mapper(componentModel = "spring")
+public interface UserMapper {
     
-    private final JournalEntryMapper journalEntryMapper;
+    @Mapping(target = "journalEntries", ignore = true)
+    @Mapping(target = "goals", ignore = true)
+    User toDomain(UserJpaEntity entity);
     
-    public User toDomain(UserJpaEntity entity) {
-        if (entity == null) {
-            return null;
-        }
-        
-        User user = new User();
-        user.setId(entity.getId());
-        user.setUsername(entity.getUsername());
-        user.setEmail(entity.getEmail());
-        user.setPassword(entity.getPassword());
-        user.setCreatedAt(entity.getCreatedAt());
-        user.setUpdatedAt(entity.getUpdatedAt());
-        
-        if (entity.getJournalEntries() != null) {
-            user.setJournalEntries(entity.getJournalEntries().stream()
-                    .map(journalEntryMapper::toDomainWithoutUser)
-                    .collect(Collectors.toList()));
-        }
-        
-        return user;
-    }
+    @Mapping(target = "journalEntries", ignore = true)
+    @Mapping(target = "goals", ignore = true)
+    UserJpaEntity toEntity(User user);
     
-    public UserJpaEntity toEntity(User user) {
-        if (user == null) {
-            return null;
-        }
-        
-        UserJpaEntity entity = new UserJpaEntity();
-        entity.setId(user.getId());
-        entity.setUsername(user.getUsername());
-        entity.setEmail(user.getEmail());
-        entity.setPassword(user.getPassword());
-        entity.setCreatedAt(user.getCreatedAt());
-        entity.setUpdatedAt(user.getUpdatedAt());
-        
-        return entity;
-    }
+    @Named("toBasicUser")
+    @Mapping(target = "journalEntries", ignore = true)
+    @Mapping(target = "goals", ignore = true)
+    @Mapping(target = "password", ignore = true)
+    User toBasicUser(UserJpaEntity entity);
 }

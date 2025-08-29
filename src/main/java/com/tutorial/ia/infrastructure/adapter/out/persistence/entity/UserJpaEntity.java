@@ -11,8 +11,8 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 @Data
-@EqualsAndHashCode(exclude = "journalEntries")
-@ToString(exclude = "journalEntries")
+@EqualsAndHashCode(exclude = {"journalEntries", "goals", "analysisReports"})
+@ToString(exclude = {"journalEntries", "goals", "analysisReports"})
 public class UserJpaEntity {
     
     @Id
@@ -33,4 +33,10 @@ public class UserJpaEntity {
     
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<JournalEntryJpaEntity> journalEntries;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<GoalJpaEntity> goals;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<AnalysisReportJpaEntity> analysisReports;
 }

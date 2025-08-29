@@ -1,0 +1,21 @@
+-- Template de datos de prueba para usuarios
+-- INSTRUCCIONES: 
+-- 1. Copia este archivo a data.sql
+-- 2. Modifica los datos según necesites
+-- 3. data.sql está en .gitignore por seguridad
+
+INSERT INTO users (username, email, password, created_at, updated_at) VALUES 
+('john_doe', 'john.doe@example.com', 'password123', '2024-01-15 10:00:00', '2024-01-15 10:00:00'),
+('jane_smith', 'jane.smith@example.com', 'securepass456', '2024-01-16 11:30:00', '2024-01-16 11:30:00'),
+('alex_wilson', 'alex.wilson@example.com', 'mypassword789', '2024-01-17 14:20:00', '2024-01-17 14:20:00'),
+('mario_dev', 'mario.dev@example.com', 'password456', '2024-05-20 08:00:00', '2024-05-20 08:00:00');
+
+-- Template de datos de prueba para entradas de diario
+-- Sustituye estos datos por tus datos reales
+
+INSERT INTO journal_entry (title, entry, user_id, created_at, updated_at) VALUES 
+('Ejemplo de entrada', 'Aquí va tu contenido de diario real...', 4, '2024-05-31 22:00:00', '2024-05-31 22:00:00');
+
+-- Template de datos de prueba para objetivos
+INSERT INTO goal (title, description, goal_type, is_completed, user_id, created_at, updated_at) VALUES 
+('Objetivo ejemplo', 'Descripción del objetivo...', 'SHORT_TERM', false, 4, '2024-05-20 08:30:00', '2024-05-20 08:30:00');

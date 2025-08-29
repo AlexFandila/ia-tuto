@@ -1,23 +1,23 @@
 package com.tutorial.ia.infrastructure.adapter.out.persistence.mapper;
 
-import com.tutorial.ia.domain.model.JournalEntry;
-import com.tutorial.ia.infrastructure.adapter.out.persistence.entity.JournalEntryJpaEntity;
+import com.tutorial.ia.domain.model.Goal;
+import com.tutorial.ia.infrastructure.adapter.out.persistence.entity.GoalJpaEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
 @Mapper(componentModel = "spring", uses = {UserMapper.class})
-public interface JournalEntryMapper {
+public interface GoalMapper {
     
     @Mapping(target = "user", source = "user", qualifiedByName = "toBasicUser")
-    JournalEntry toDomain(JournalEntryJpaEntity entity);
+    Goal toDomain(GoalJpaEntity entity);
     
     @Mapping(target = "user", ignore = true)
     @Named("toDomainWithoutUser")
-    JournalEntry toDomainWithoutUser(JournalEntryJpaEntity entity);
+    Goal toDomainWithoutUser(GoalJpaEntity entity);
     
     @Mapping(target = "user.journalEntries", ignore = true)
     @Mapping(target = "user.goals", ignore = true)
     @Mapping(target = "user.analysisReports", ignore = true)
-    JournalEntryJpaEntity toEntity(JournalEntry journalEntry);
+    GoalJpaEntity toEntity(Goal goal);
 }

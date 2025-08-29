@@ -1,0 +1,11 @@
+package com.tutorial.ia.domain.exception;
+
+public class GoalNotFoundException extends RuntimeException {
+    public GoalNotFoundException(String message) {
+        super(message);
+    }
+    
+    public GoalNotFoundException(Long goalId) {
+        super("Goal not found with id: " + goalId);
+    }
+}

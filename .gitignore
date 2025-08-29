@@ -49,3 +49,6 @@ Thumbs.db
 application-local.properties
 application-dev.properties
 *-local.properties
+
+# Datos sensibles
+src/main/resources/data.sql
